@@ -319,7 +319,11 @@ def add_card():
     global new_cards
 
     deck,ncards,size_deck,nhits,nnum=load_deck(path+"/deck", False)
-    front, back = zip(*deck)
+    if (len(deck)!=0):
+        front, back = zip(*deck)
+    else:
+        front = []
+        back = []
     front = list(front)
     back = list(back)
     
